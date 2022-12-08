@@ -21,7 +21,7 @@ Pour me challenger j'ai :
 - [x] fait du responsive
 
 
-N'hésitez pas à me faire vos retours pour que je puisse améliorer ce module. 
+N'hésitez pas à me faire vos retours pour que je puisse améliorer ce projet ! 
 
 
 
