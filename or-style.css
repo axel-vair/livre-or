@@ -1,0 +1,403 @@
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+/* HTML BODY TITLE & GENERAL */
+
+html {
+    display: flex;
+    flex-direction: column;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+p {
+    display: flex;
+    justify-content: center;
+    margin-top : 10px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#error {
+    color: red;
+}
+
+#valid {
+    color: green;
+}
+
+a {
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.emoji{
+    margin-top: 40px;
+    align-self: center;
+    text-align: center;
+}
+
+.emojipic {
+    width: 50%;
+
+}
+#index_git {
+
+    width: 100%;
+
+}
+#index_link {
+
+    width: 100%;
+
+}
+
+/* FORM INSCRIPTION & CONNEXION */
+
+legend{
+    color: #452F9F;
+}
+
+fieldset {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #452F9F;
+    align-content: center;
+}
+
+input {
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid rgb(226 219 255);
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+button {
+    width: 140px;
+    align-self: center;
+    padding: 10px;
+    margin-top: 15px;
+    border: 2px solid #452F9F;
+    border-radius: 20px;
+    background: #FFFFFF;
+    color: #452F9F;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(203 196 230);
+}
+
+.container_formulaire{
+    height: 100%;
+    margin: 40px;
+}
+
+
+/* TABLEAU PROFIL */
+
+
+thead {
+    font-weight: bold;
+    background-color: #efebff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+
+td {
+    border: 1px solid #efebff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#tableau {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+button {
+    border: 1px solid rgb(109 74 255);
+    border-radius: 5px;
+    background: rgb(109 74 255);
+    color: #FFFFFF;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #452F9F;
+    background: #452F9F;
+    transition: ease-in 100ms;
+}
+
+/* TABLEAU ADMIN */
+
+#table_admin {
+    align-self: center;
+    width: 80%;
+}
+
+.delete {
+    background: red;
+    border: 1px solid red;
+    align-content: center;
+    margin-right: 20px;
+}
+
+.delete:hover {
+    background: darkred;
+    border: 1px solid darkred
+}
+
+.modifier {
+    margin-right: 10px;
+}
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    background: rgb(226 219 255);
+    position:absolute; !important;
+    width: 100%;
+    bottom:0;
+
+}
+
+img {
+    width: 8%;
+    height: auto;
+
+}
+
+.logo_footer {
+    width: 5%;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.git:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.logo_footer {
+    cursor: pointer;
+}
+
+/* FOOTER 2 */
+
+#footer2 {
+    display: flex;
+    justify-content: center;
+    background: rgb(226 219 255);
+    width: 100%;
+    bottom:0;
+    position: relative;
+
+}
+
+img {
+    width: 8%;
+    height: auto;
+
+}
+
+.logo_footer {
+    width: 5%;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.git:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.logo_footer {
+    cursor: pointer;
+}
+
+
+/* COMMENTAIRES */
+#p_commentaire {
+    color: green;
+}
+
+#fieldset_comment {
+    border: white;
+}
+/* RESPONSIVE */
+
+@media (max-width: 780px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100% !important;
+        background: rgb(226 219 255);
+        font-family: 'Karla', sans-serif;
+        padding-bottom: 10px;
+
+    }
+
+    h2 {
+        margin: 0 10px;
+    }
+    ul{
+        text-align: center;
+        flex-direction: column;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        display: none;
+    }
+    img {
+        width: 20%;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        margin-top: 5px;
+        overflow: auto;
+
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    td:before {
+
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-family: 'Karla', sans-serif;
+    }
+    td:nth-of-type(1):before { content: "Nom"; }
+    td:nth-of-type(2):before { content: "Prenom"; }
+    td:nth-of-type(3):before { content: "Login"; }
+    td:nth-of-type(4):before { content: "Mot de passe"; }
+
+    #tableau {
+        flex-direction: column;
+    }
+}
+
+
+.container_livre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px;
+    font-size: 18px;
+    border: 1px solid darkgrey;
+    padding: 20px;
+}
+
+#info {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+
+}
+
+#com {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+
+#butt {
+    text-align: center;
+}
