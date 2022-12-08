@@ -1,6 +1,6 @@
 # Livre d'or
-*Reprise du module de connexion et ajout d'un livre d'or*
-** Réécriture du code en utilisant PDO **
+*Reprise du module de connexion et ajout d'un livre d'or. Utilisation de PDO.*
+
 ----
 
 Dans ce projet doit figurer : 
