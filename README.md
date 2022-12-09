@@ -21,7 +21,9 @@ Pour me challenger j'ai :
 - [x] fait du responsive
 
 
-N'hésitez pas à me faire vos retours pour que je puisse améliorer ce projet ! 
+Ajouts 09/12/2022 :
 
+- Empêcher la modification d'un login par un pseudo déjà existant.
+- Ajout de la possibilité de supprimer ses propres commentaires. 
 
 
