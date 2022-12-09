@@ -61,7 +61,7 @@ if(!empty($_SESSION)) {
                 <tbody>
                 <tr>
                     <td><input id="input_profil" name="login" value="<?php echo $results['login'] ?>"required></td>
-                    <td><input id="input_profil" name="password" value="<?php echo $results['password'] ?>"></td>
+                    <td><input type="password" id="input_profil" name="password" value="<?php echo $results['password'] ?>"></td>
                 </tr>
                 </tbody>
                 <button class="delete" type="submit" name="delete">Supprimer mon compte</button>
