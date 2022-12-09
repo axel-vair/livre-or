@@ -35,14 +35,17 @@ if(isset($_SESSION)) {
         #4 - We execute the request inside array.
         #5 - We redirect to index.php
     */
-    if(!empty($_POST['message']) && isset($_POST['submit'])){
-        $commentaire = $_POST['message'];
-        $sql = 'INSERT INTO commentaires(commentaire, id_utilisateur, date) VALUES(:commentaire, :id_utilisateur, :date)';
-        $sql_insert = $conn->prepare($sql);
-        $sql_insert->execute(([$commentaire, $idUser, $date]));
-        header('Location: livre-or.php');
-    }
+       if(empty($_POST['message']) && isset($_POST['submit'])) {
+        echo "<p id='error'>Veuillez remplir le champ commentaire</p>";
+         }if(!empty($_POST['message'])){
+            $commentaire = $_POST['message'];
+            $sql = 'INSERT INTO commentaires(commentaire, id_utilisateur, date) VALUES(:commentaire, :id_utilisateur, :date)';
+            $sql_insert = $conn->prepare($sql);
+            $sql_insert->execute(([$commentaire, $idUser, $date]));
+            header('Location: livre-or2.php');
+        }
 }
+
 
 ?>
 
