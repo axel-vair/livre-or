@@ -26,4 +26,7 @@ Ajouts 09/12/2022 :
 - Empêcher la modification d'un login par un pseudo déjà existant.
 - Ajout de la possibilité de supprimer ses propres commentaires. 
 
+Ajout 10/12/2022 :
+
+- Empêcher la possibilité de s'inscrire avec un login vide.
 
