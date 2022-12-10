@@ -1,46 +1,22 @@
+
 <?php
 
 include 'header.php'; // HEADER FILE LINK
 include 'connect.php'; // BDD CONNECT
 
 
-    // If post login and post password are not empty
-    if (!empty($_POST['login']) && !empty($_POST['password'])) {
+if(isset($_POST['submit'])){ // if user click on the button
+    if($_POST['login'] > 3){ // if input are not null
+        $login = htmlspecialchars($_POST['login']);
+        $pass1 = htmlspecialchars($_POST['password']);
+        $pass2 = htmlspecialchars($_POST['confirmation_password']);
 
-        /* Stock login, password and confirmation inside variables */
-        $login = $_POST['login'];
-        $pass1 = $_POST['password'];
-        $pass2 = $_POST['confirmation_password'];
-        /*
-            #1 - Request query inside variable. I use parameter marker for avoid SQL injection.
-            With PDO we don't include input inside the request, we use these markers for
-            bind users inputs at this request.
-
-            #2 - Then, we prepare the request. That's help to ovoid SQL injection because we
-            don't need to protect params manually.
-
-            #3 - We use bindValue or bindParam to binds the parameter to the marker. The first
-            param is the marker used inside the prepare query, second the value to bind at this
-            first param. We can add a third parameter : type of param.
-
-            #4 - Finally we execute the query and we fetch the result and we specify we wanna
-            fetch data inside FETCH_ASSOC.
-        */
-        $sql = "SELECT * FROM utilisateurs WHERE login = :login";
-        $sql_exe = $conn->prepare($sql);
-        $sql_exe->bindValue(':login', $login);
+        $sql ='SELECT * FROM utilisateurs WHERE login = :login';
+        $sql_exe = $conn->prepare($sql);// so prepare request for search if login is taken
+        $sql_exe->bindParam(':login', $login);
         $sql_exe->execute();
         $results = $sql_exe->fetch(PDO::FETCH_ASSOC);
 
-
-        /*
-            #1 - If results is not false, so user exist and display error message.
-
-            #2 - Else, if password and confirmation password are the same prepare the request, execute it and
-            redirect to connexion.php. Display success message, then redirect to connexion.php.
-
-            #3 - Else we display error message
-        */
         if ($results) {
             echo "<p id='error'>Ce login est déjà pris</p>";
         } else {
@@ -56,7 +32,12 @@ include 'connect.php'; // BDD CONNECT
                 echo "<p id='error'>Les mots de passe ne correspondent pas !";
             }
         }
+
+    }else{
+        echo "Veuillez remplir tous les champs";
     }
+}
+
 
 ?>
 
@@ -73,7 +54,7 @@ include 'connect.php'; // BDD CONNECT
 <body>
 
 <h1> Formulaire d'inscription </h1>
-<form action="inscription.php" name='register' method='post'>
+<form action="inscription.php" name='register' method='POST'>
     <fieldset>
         <legend> Informations personnelles de l'utilisateur </legend>
         <label for="login">Votre login </label> <br>
@@ -81,8 +62,8 @@ include 'connect.php'; // BDD CONNECT
         <label for="password">Mot de passe</label> <br>
         <input type = "password" name="password" id="password" required> <br>
         <label for="confirmation_password">Confirmer votre mot de passe</label> <br>
-        <input type = "password" name= "confirmation_password" id="confirmation_password" required> <br>
-        <br><button type="submit" value = "inscription">S'inscrire</button>
+        <input type = "password" name="confirmation_password" id="confirmation_password" required> <br>
+        <br><button type="submit" name="submit" value = "inscription">S'inscrire</button>
     </fieldset>
 </form>
 <?php include 'footer.php'?>
